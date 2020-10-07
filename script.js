@@ -59,18 +59,6 @@ function searchWeather (searchValue){
 }
 
 
-//setting up the main current weather
-  //  $.getJSONP(function() {
-  //     $("#city-name").html(response.name);
-       //  $("#weather_info").html(response.weather[0]);
-      //   console.log(name);
-       //$("#wind-speed").text(response.list.speed);
-  //       $("#Humidity").html(response.main.humidity);
-      // console.log(response);
-    //    // var tempF = (response.main.temp - 273.15) * 1.80 + 32;
-    //   ("#tempToday").html(response.list.temp.day -273.15) * 1.80+32;
-     //    $("#humidity").text(response.list.humidity);
-      //   console.log(response);
     }) 
 
 function uvSearch(lat, lon){
@@ -82,19 +70,24 @@ function uvSearch(lat, lon){
         console.log(response);
       })
     }
+
+
 function getForecast(search){
-    let day_counter =1;
+    let day_counter =1;    //setting up the day counter to increment by 1
+
     $.ajax({
         method: "GET",
         url: `https://api.openweathermap.org/data/2.5/forecast?q=${search}&units=imperial&appid=166a433c57516f51dfab1f7edaed8413`
       }).then(function(response) {
-        for(i=4; i < 40; i +=8){
+        for(i=4; i < 40; i +=3){
     
 
 
 
-            // putting the weather img for each day.
+            // setting the weather img for each day.
             var weatherIcon = response.list[i].weather[0].icon
+
+            //each day of forecast iterating through the index
          $("#img" + day_counter).attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);          
          $("#date" + day_counter).html(response.list[i].main.temp.toFixed(0));  //date works but puts it in a weird place
          $("#humidity1").html(response.list[i].main.humidity);
