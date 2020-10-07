@@ -17,10 +17,10 @@ header {
 
 
 #City {
-  background-color: #e5f783;
+  background-color: #9dd3f3;
   font-family: 'Open Sans Condensed', sans-serif;
-  
-  margin-top: 1%;
+  height: 650px;
+  margin-top: 2%;
   border-radius: 5px;
 }
 
@@ -59,9 +59,11 @@ input {
   width: 700px;
   height: 400px;
   font-weight: bold;
-  background-color: rgb(199, 250, 186); 
+  background-color: rgb(197, 240, 186); 
   border-bottom: 5px solid rgb(173, 169, 169);
   border-top: 5px solid rgb(173, 169, 169);
+  border-left: 5px solid rgb(173, 169, 169);
+  border-right: 5px solid rgb(173, 169, 169);
 }
 
 #forecast {
@@ -116,7 +118,7 @@ form.search-city  button:hover {
 }
 
 #day5 {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 h3{
