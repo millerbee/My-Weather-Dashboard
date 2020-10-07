@@ -87,10 +87,17 @@ function getForecast(search){
         url: `https://api.openweathermap.org/data/2.5/forecast?q=${search}&units=imperial&appid=166a433c57516f51dfab1f7edaed8413`
       }).then(function(response) {
         for(i=4; i < 40; i +=8){
+            // putting the weather img for each day.
             var weatherIcon = response.list[i].weather[0].icon
-         $("#day1-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`)  
+         $("#day1-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`); 
+         $("#day2-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);
+         $("#day3-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);  
+         $("#day4-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);
+         $("#day5-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);  
+         
         }
 
+        
         console.log(response);
       })
 
