@@ -1,0 +1,125 @@
+header {
+  background-color: #2270b9;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  border-bottom: 5px solid;
+  height: 150px;
+  padding-top: 20px;
+}
+
+.container {
+ margin-bottom: 5%;  
+ background-color: transparent;
+} 
+
+
+
+#City {
+  background-color: #e5f783;
+  font-family: 'Open Sans Condensed', sans-serif;
+  
+  margin-top: 1%;
+  border-radius: 5px;
+}
+
+#search {
+  margin-left: 2%;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  
+}
+
+input {
+  border-radius: 10px;
+  padding: 5%;
+}
+
+#past-searches {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  padding: 3%;
+}
+
+#content {
+  background-color:  #fffefe;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  margin-top: 2%;    
+}
+
+#weather-info {    
+  margin-bottom: 2%;
+  margin-left: 5%;
+  padding: 2%;
+  width: 700px;
+  height: 400px;
+  font-weight: bold;
+  background-color: rgb(199, 250, 186); 
+  border-bottom: 5px solid rgb(173, 169, 169);
+  border-top: 5px solid rgb(173, 169, 169);
+}
+
+#forecast {
+  background-color: transparent;
+  margin: 2%;
+  height: 50px;
+  width:  auto;
+}
+
+.col {
+  border: 1px solid #1f1f7a;
+  border-radius: 0;
+  margin: 1%;
+  background-color: #2270b9;
+  color: white;
+}
+
+#footer {
+  
+  padding: 0;
+  background-color: #2270b9;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+} 
+
+form.search-city input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 200px;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.search-city button {
+  float: left;
+  width: 18%;
+  padding: 10px;
+  border-radius: 10px;;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.search-city  button:hover {
+  background: #0b7dda;
+}
+
+#day5 {
+  margin-left: 20px;
+}
+
+h3{
+  padding-bottom: 30px;
+  
+}

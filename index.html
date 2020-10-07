@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+    <title>5 Day Weather</title>
+
+</head>
+<body>
+    
+    <header>Weather Dashboard</header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3" id="City">
+                <div id="search">
+                    <h3>Search by City: </h3>
+
+                    <form class="search-city" >
+                        <input id= "search-town" type="text" placeholder="City Name....">
+                        <button type="submit" id="submit-Btn"><i class="fa fa-search"></i></button>
+                      </form>                  
+                </div>
+
+                <div class="cityList"></div>
+            </div>
+
+            <div class="col-9" id="content">
+           
+                    <div id="weather-info">
+                        <h1><span id="city-name"></span></h1> 
+                        <h3><span class="current-date"></span></h3>                                           
+                        <p>Temperature: <span id="temp-today"></span> &#8457</p>
+                        <p>Wind Speed: <span id="wind-speed"></span> mph</p>
+                        <p>Humidity: <span id="humidity"></span>%</p>
+                        <p>UV Index: <span id="UV-index"></span></p>
+                    </div>  
+
+                <h3 id ="day5">5-Day Forecast</h3>
+               
+                <div class="row row-cols-5" id="forecast">
+                    <div class="col" id="day1">
+                        <p id="date1"></p>
+                        <p>Temp: <span id="temperature1"></span> &#8457</p>
+                        <p>Humidity: <span id="humidity1"></span>%</p>
+                        <img id = "day1-img">
+                    </div>
+
+                    <div class="col" id="day2">
+                        <p id="date2"></p>
+                        <p>Temp: <span id="temp2"></span> &#8457</p>
+                        <p>Humidity: <span id="humidity2"></span>%</p>
+
+                    </div>
+
+                    <div class="col" id="day3">
+                        <p id="date3"></p>
+                        <p>Temp: <span id="temp3"></span> &#8457</p>
+                        <p>Humidity: <span id="humidity3"></span>%</p>
+
+                    </div>
+
+                    <div class="col" id="day4">
+                        <p id="date4"></p>
+                        <p>Temp: <span id="temp4"></span> &#8457</p>
+                        <p>Humidity: <span id="humidity4"></span>%</p>
+
+                    </div>
+
+                    <div class="col" id="day5">
+                        <p id="date5"></p>
+                        <p>Temp: <span id="temp5"></span> &#8457</p>
+                        <p>Humidity: <span id="humidity5"></span>%</p>
+
+                    </div>                      
+                </div>
+            
+                
+            </div>
+            
+          </div>        
+    </div>
+
+
+    <div id="footer"> </div>
+        
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src = "script.js"></script> 
+</body>
+
+
+  
+</html>
