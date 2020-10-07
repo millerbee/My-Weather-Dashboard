@@ -44,11 +44,11 @@ input {
 }
 
 #content {
-  background-color:  #fffefe;
+  background-color:  transparent;
   font-family: 'Open Sans Condensed', sans-serif;
   border-radius: 5px;
-  height: auto;
-  width: auto;
+  height: 800px;
+  width: 1000px;
   margin-top: 2%;    
 }
 
@@ -70,13 +70,16 @@ input {
   background-color: transparent;
   margin: 2%;
   height: 50px;
-  width:  auto;
+  width:  800px;
 }
 
 .col {
   border: 1px solid #1f1f7a;
   border-radius: 0;
-  margin: 1%;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 60px;
+  height: 200px;
   background-color: #2270b9;
   color: white;
 }

@@ -51,7 +51,7 @@ function searchWeather (searchValue){
         $("#humidity").html(response.main.humidity);
         $("#wind-speed").html(response.wind.speed);
       //  $('#temperature').html(response.main.temp);
-        $("#temp-today").html(response.main.temp.toFixed(2));
+        $("#temp-today").html(response.main.temp.toFixed(0));
 
 
         getForecast(searchValue);
@@ -74,6 +74,7 @@ function searchWeather (searchValue){
     }) 
 
 function uvSearch(lat, lon){
+   
     $.ajax({
         method: "GET",
         url: `https://api.openweathermap.org/data/2.5/uvi?appid=166a433c57516f51dfab1f7edaed8413&lat=${lat}&lon=${lon}`
@@ -82,19 +83,39 @@ function uvSearch(lat, lon){
       })
     }
 function getForecast(search){
+    let day_counter =1;
     $.ajax({
         method: "GET",
         url: `https://api.openweathermap.org/data/2.5/forecast?q=${search}&units=imperial&appid=166a433c57516f51dfab1f7edaed8413`
       }).then(function(response) {
         for(i=4; i < 40; i +=8){
+    
+
+
+
             // putting the weather img for each day.
             var weatherIcon = response.list[i].weather[0].icon
-         $("#day1-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`); 
-         $("#day2-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);
-         $("#day3-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);  
-         $("#day4-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);
-         $("#day5-img").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);  
-         
+         $("#img" + day_counter).attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);          
+         $("#date" + day_counter).html(response.list[i].main.temp.toFixed(0));  //date works but puts it in a weird place
+         $("#humidity1").html(response.list[i].main.humidity);
+
+         $("#img" + day_counter).attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);          
+         $("#date" + day_counter).html(response.list[i].main.temp.toFixed(0));  //date works but puts it in a weird place
+         $("#humidity" + day_counter).html(response.list[i].main.humidity);
+
+         $("#img" + day_counter).attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);          
+         $("#date" + day_counter).html(response.list[i].main.temp.toFixed(0));  //date works but puts it in a weird place
+         $("#humidity" + day_counter).html(response.list[i].main.humidity);   
+
+         $("#img" + day_counter).attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);          
+         $("#date" + day_counter).html(response.list[i].main.temp.toFixed(0));  //date works but puts it in a weird place
+         $("#humidity" + day_counter).html(response.list[i].main.humidity);
+
+         $("#img" + day_counter).attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`);          
+         $("#date" + day_counter).html(response.list[i].main.temp.toFixed(0));  //date works but puts it in a weird place
+         $("#humidity" + day_counter).html(response.list[i].main.humidity);
+
+         day_counter ++;
         }
 
         
